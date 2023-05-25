@@ -1,9 +1,6 @@
 from pathlib import Path
 import os 
 import environ 
-##from corsheaders.defaults import default_headers, default_methods
-
-
 
 env = environ.Env()
 environ.Env.read_env()
@@ -17,7 +14,6 @@ DEBUG = True
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV') 
 
 DJANGO_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -26,7 +22,7 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-
+    'apps.documentos',
 ]
 
 THIRD_PARTY_APPS = [
@@ -34,7 +30,7 @@ THIRD_PARTY_APPS = [
     'corsheaders'
 ]
 
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -67,16 +63,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# connection = cx_Oracle.connect(user="RESLTISYS", password="RESLTISYS",
-#                                dsn="192.168.105.121:1539/mtpe_desa",
-#                                encoding="UTF-8")
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'localhost:1521/xe',
-        'USER': 'SELTI',
-        'PASSWORD': 'SELTI'
+        'NAME': '192.168.105.121:1539/mtpe_desa',
+        'USER': 'RESLTISYS',
+        'PASSWORD': 'RESLTISYS'
 
     }
 }
