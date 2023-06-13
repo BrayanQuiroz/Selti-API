@@ -23,6 +23,7 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'apps.documentos',
+    'apps.apidocumento'
 ]
 
 THIRD_PARTY_APPS = [
@@ -94,7 +95,7 @@ REST_FRAMEWORK = {
         '%d/%m/%Y',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'apps.seguridad.auth.CustomAuthenticationTemporal',
+        # 'apps.seguridad.auth.CustomAuthenticationTemporal',
     ),
 }
 

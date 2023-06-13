@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DocumentosConfig(AppConfig):
+class ApidocumentoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.documentos'
+    name = 'apps.apidocumento'
