@@ -23,7 +23,8 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'apps.documentos',
-    'apps.apidocumento'
+    'apps.apidocumento',
+    'apps.empresas'
 ]
 
 THIRD_PARTY_APPS = [
@@ -43,6 +44,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'core.urls'
 

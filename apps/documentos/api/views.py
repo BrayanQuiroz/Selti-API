@@ -3,7 +3,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 from apps.documentos.models import TipoDocumentos
 from apps.documentos.filters import TipoDocumentosFilterSet
-from .serializers import TipoDocumentoSerializer
+from .serializers import (TipoDocumentoSerializer )
 from .. import constants 
 
 class TipoDocumentoList(generics.ListAPIView):
@@ -21,3 +21,5 @@ class TipoDocumentoList(generics.ListAPIView):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_class = TipoDocumentosFilterSet
     search_fields = ['codigo','abreviadura','flag']
+
+
